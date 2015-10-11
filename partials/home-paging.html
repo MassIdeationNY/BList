@@ -1,0 +1,50 @@
+<style>
+	ul li {
+		list-style: none;
+		background: pink;
+		margin: 1em;
+		cursor: pointer;
+	}
+	list-view {
+		margin-bottom: 2em;
+	}
+	.buttons {
+		height: 4em;
+		background: yellow;
+	}
+	.page_button {
+		background:orange;
+		width: 5em;
+		height: 2em;
+	}
+</style>
+<section class="homepage">
+	<center><h2 class="title">The Black List</h2></center>
+	<hello-world></hello-world>
+	<div ng-controller="listViewController">
+    <div list-view list="foo in collectionOfFoos" >
+    	{{ collectionOfFoos}}
+    	 {{currentPage+1}}/{{numberOfPages()}}
+	       <ul>
+			   <li ng-repeat="foo in collectionOfFoos | startFrom:currentPage*pageSize | limitTo:pageSize" ng-click="clickMe()"> {{ foo.title }} {{foo.description}} </li>
+		   </ul>
+        <div class="buttons">
+         <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1" class="page_button">
+	        Previous
+	    </button>
+	    {{currentPage+1}}/{{numberOfPages()}}
+	    <button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1" class="page_button">
+	        Next
+	    </button>
+	</div><!-- end listView -->
+    <div></div>
+	<!-- Show Video Player -->
+	
+	<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil im</p>
+	<center>
+		<button type="submit" value="ButtonOne" ng-click="go('/')">Button One</button>
+		<p></p>
+		<br/><br/>
+		<button type="submit" value="ButtonTwo" ng-click="go('/')">Button Two</button>
+	</center>
+</section>

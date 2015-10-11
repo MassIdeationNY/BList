@@ -1,0 +1,31 @@
+<style>
+	img {
+		margin: 2em;
+	}
+	.detail-page {
+		margin: 1em;
+	}
+	/* media queries */
+@media (max-width: 651px) {
+  /* line 8, ../sass/partials/_main.sass */
+  img {
+    width: 70%;
+  }
+}
+</style>
+<section class="detail-page">
+	<center><h2 class="title">The Black List Business Detail</h2></center>
+	<hello-world></hello-world>
+	<div ng-controller="DetailController">
+   
+ 	<img src="http://placehold.it/450x350" class="business_img"> 
+ 		<!-- Show Video Player -->
+	
+	<p>lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil im</p>
+	<center>
+		<button type="submit" value="ButtonOne" ng-click="go('/')">Button One</button>
+		<p></p>
+		<br/><br/>
+		<button type="submit" value="ButtonTwo" ng-click="go('/')">Button Two</button>
+	</center>
+</section>

@@ -1,0 +1,259 @@
+html, body {
+  height: 100%;
+}
+
+.container {
+   min-height:100%;
+   position:relative;
+   padding: 0em;
+    max-width: 1200px;
+    width: 100%;
+    float: left;
+    display: inline;
+    margin-right: auto;
+    margin-left: auto;
+}
+.header {
+  height: 100px;
+  background-color: #cccccc;
+  background-image: url(../images/Mi-logo.png);
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.footer  {
+  background: #cccccc;
+  width: 100%;
+  height: 100px;
+  margin-top: 1em;
+}
+
+h2.title {
+  color: #333;
+  font-family: "Arial", serif;
+  font-size: 42px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-bar {
+  background-color: #321f10;
+  height: 95px;
+  width: 100%;
+  position: relative;
+  bottom: 2em;
+}
+
+button {
+  background-color: #ccc;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  font-size: 34px;
+  padding: 0.5em;
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+/* media queries */
+@media (min-width: 651px) and (max-width: 985px) {
+  /* line 8, ../sass/partials/_main.sass */
+  .footer {
+    width: 100%;
+  }
+}
+@media (max-width: 651px) {
+   p {
+    margin: 1em;
+    }
+    form {
+      margin-left: 1em;
+    }
+  .footer {
+    width: 100%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+
+  #viddy {
+    width: 100%;
+  }
+}
+/*  Form goodies */
+.formpage {
+  padding: 1em;
+}
+
+form {
+  margin-left: 1em;
+}
+input[type="submit"] {
+    background: #ccc;
+    border: 0;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 2em 10px 0 0;
+    padding: 1em;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    width: 18em;
+    text-decoration: none;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+label {
+    margin: 4px 10px 0 0;
+    display: block;
+    font-family: 'Playfair Display', serif;
+}
+
+.formField {
+    border: 1px solid #74746d;
+    padding: 4px;
+    width: 285px;
+    font-size: 1em;
+}
+
+.errors {
+    position: absolute;
+    top: 25%;
+    left: 300px;
+}
+
+.error {
+    font-size: 1em;
+    color: #a94442;
+    padding: 0.85em;
+    background-color: #f2dede;
+    width: 16em;
+    border: .125em solid #ebccd1;
+    border-radius: 4px;
+    transition: 0.25s linear opacity;
+    opacity: 0;
+    margin: 0;
+    position: relative;
+}
+
+.info {
+    font-size: 1em;
+    padding: 0.85em;
+    width: 256px;
+    border: 1px solid #bce8f1;
+    border-radius: 4px;
+    transition: 0.5s linear opacity;
+    margin: 0;
+    position: relative;
+    color: #31708f;
+    background-color: #d9edf7;
+}
+
+.ng-enter .error,
+.ng-active .error {
+    opacity: 1;
+}
+
+.ng-enter.error,
+.ng-active.error {
+    opacity: 1;
+}
+/*  Map goodies  */
+.mappage {
+  padding: 1em;
+}
+
+#map {
+  cursor: pointer;
+  height: 320px;
+  background: #ccc;
+  padding: 1em;
+}
+
+.nav_bar { position:fixed; }
+.nav_bar.open { width: 240px
+
+/*
+ button {
+        display: inline-block;
+        border: 0;
+        outline: 0;
+        text-align: center;
+        cursor: pointer;
+
+        padding: .5rem 1rem;
+
+        background-color: #43ac6a;
+      }
+
+      pre {
+        padding: 1rem;
+        background-color: #dedede;
+        white-space: pre-wrap;
+      }
+
+      button[list-edit-toggle] {
+        background-color: #f08a24;
+      }
+
+      button[list-item-edit="remove"] {
+        padding: .5rem 0;
+        height: 100%;
+        width: 100%;
+        background-color: #f04124;
+      }
+
+      div[list-view] {
+        width: 480px;
+        margin: 0 auto;
+        padding: 1rem;
+
+        background-color: #eaeaea;
+      }
+
+      div[list-view] > div:first-child {
+        padding: .5rem 1rem;
+        background-color: #cdcdcd;
+      }
+
+      div[list-view] > div:first-child h1 {
+        margin-top: 0;
+      }
+
+      div[list-item] {
+        display: flex;
+        margin-top: .5rem;
+        height: 200px;
+      }
+
+      div.list-item-body {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        background-color: #ababab;
+        transition: .3s width ease-out;
+      }
+
+      div[list-item]:nth-child(2n) div.list-item-body {
+        background-color: #909090;
+      }
+
+      div.list-item-body.edit-mode {
+        width: 80%;
+      }
+
+      div.list-item-controls {
+        height: 100%;
+        width: 0%;
+        transition: .3s width ease-out;
+      }
+
+      div.list-item-controls.edit-mode {
+        width: 20%;
+      }
+
+
+*/
+
+/* ---------  list view styling ----------------*/
+
+
