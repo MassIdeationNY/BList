@@ -1,0 +1,31 @@
+
+<style>
+	.container {
+		width: 100%;
+	}
+	section {
+		padding: 1em;
+	}
+	#editing-view-port {
+		width: 300px;
+	}
+</style>
+<section class="searchpage">
+
+	<center><h2 class="title">The Black List Business Search</h2></center>
+	<hello-world></hello-world>
+	<div ng-controller="SearchController">
+
+		        <input type="search" ng-model="search" placeholder="Search for Businesses">
+		        <ul>
+		            <li ng-repeat="name in names | filter:search">
+		                {{ name }}
+		            </li>
+		        </ul>
+		          
+    </div> <!-- end search controller -->
+    <center>
+		<button type="submit" value="ButtonOne" ng-click="go('/')">Home</button>
+		<p></p>
+	</center>
+</section>

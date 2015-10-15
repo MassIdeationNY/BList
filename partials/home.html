@@ -58,5 +58,5 @@
 				   <li ng-repeat="foo in collectionOfFoos | startFrom:currentPage*pageSize | limitTo:pageSize" ng-click="go('/detail')"><img src='{{foo.image}}' height='50' weight='50'> {{foo.description}} </li>
 			   </ul>
 		</div><!-- end listView -->
-		<button type="submit" value="MoreCategories" ng-click="showMe('')">More Categories</button>
+		<button type="submit" value="MoreCategories" ng-click="go('/search')">More Categories</button>
 </section>

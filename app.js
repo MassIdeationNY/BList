@@ -13,6 +13,14 @@ app.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'partials/details.html',
       controller: 'DetailController'
     }).
+    when('/search', {
+      templateUrl: 'partials/search.html',
+      controller: 'SearchController'
+    }).
+    when('/map', {
+      templateUrl: 'partials/map.html',
+      controller: 'SearchController'
+    }).
     otherwise({
       redirectTo: '/'
     });
@@ -58,6 +66,45 @@ app.controller("DetailController", function($scope,  $http, $location ){
       };
 
 });//end detail controller
+
+app.controller("SearchController", function($scope,  $http, $location ){
+  console.log("SearchController");
+
+  $scope.names = [
+    'World Wide Technology Inc.',
+    'ACT-1 Group',
+    'Bridgewater Interiors, L.L.C',
+    'Modular Assembly Innovations L.L.C.',
+    'Manna Inc.',
+    'The Anderson-DuBose Cos.',
+    'Global Automotive Alliance L.L.C.',
+    'Thompson Hospitality ',
+    'Radio One Inc.',
+    'SET Enterprises Inc.',
+    'Fair Oaks Farms L.L.C.',
+    'Hightowers Petroleum Co. ',
+    'H. J. Russell & Co.',
+    'Millennium Steel Service L.L.C.',
+    'Manufacturers Industrial Group L.L.C',
+    'Mays Chemical Co. Inc.',
+    'Millennium Steel of Texas L.P',
+    'Baldwin Richardson Foods Co.',
+    'Urban Lending Solutions',
+    'Harpo Inc.'];
+
+  //
+  // cooper s - for when we need data
+  //$http.get("http://khalidmills.com/hr/units.json").then(function(r){
+  //$http.get("http://harlemreservations-campaigner.rhcloud.com/unit").then(function(r){
+  //$http.get("http://127.0.0.1:8080/unit/").then(function(r){
+  //});//end http get 
+
+   $scope.go = function ( path ) {
+        console.log("click for new view..." + path );
+        $location.path( path );
+      };
+
+});//end search controller
 
 app.controller('listViewController', ['$scope', function($scope) {
 
