@@ -135,7 +135,7 @@ app.controller('listViewController', ['$scope', function($scope) {
     
     $scope.addAFoo = function addAFoo() {
         console.log("AddFoo...");
-        var foo = {title: 'Foo', description: 'This is a Foo'};
+        var foo = {image: 'foo image', title: 'Foo', description: 'This is a Foo'};
         $scope.collectionOfFoos.push(foo);   
     }
 

@@ -41,13 +41,13 @@
 	    <div list-view list="foo in collectionOfFoos" id="myRestaurants">
 	    	 {{currentPage+1}}/{{numberOfPages()}}
 		       <ul style="overflow: scroll; height:200px;">
-				   <li ng-repeat="foo in collectionOfFoos | startFrom:currentPage*pageSize | limitTo:pageSize" ng-click="go('/detail')"><img src='{{foo.image}}' height='50' weight='50'> {{foo.description}} </li>
+				   <li ng-repeat="foo in collectionOfFoos | startFrom:currentPage*pageSize | limitTo:pageSize" ng-click="go('/detail')"><img ng-src='{{foo.image}}' height='50' weight='50'>  {{foo.description}} </li>
 			   </ul>
 		</div><!-- end listView -->
 		<button type="submit" value="ButtonOne" ng-click="showMe('bars')">Bars</button>
 		 <div list-view list="foo in collectionOfFoos" id="myBars">
 		       <ul style="overflow: scroll; height:200px;">
-				   <li ng-repeat="foo in collectionOfFoos | startFrom:currentPage*pageSize | limitTo:pageSize" ng-click="go('/detail')"><img src='{{foo.image}}' height='50' weight='50'> {{foo.description}} </li>
+				   <li ng-repeat="foo in collectionOfFoos | startFrom:currentPage*pageSize | limitTo:pageSize" ng-click="go('/detail')"><img ng-src='{{foo.image}}' height='50' weight='50'>{{foo.description}} </li>
 			   </ul>
 		</div><!-- end listView -->
 		<p></p>
@@ -55,7 +55,7 @@
 		<button type="submit" value="ButtonTwo" ng-click="showMe('shopping')">Shopping</button>
 		 <div list-view list="foo in collectionOfFoos" id="myShopping">
 		       <ul style="overflow: scroll; height:200px;">
-				   <li ng-repeat="foo in collectionOfFoos | startFrom:currentPage*pageSize | limitTo:pageSize" ng-click="go('/detail')"><img src='{{foo.image}}' height='50' weight='50'> {{foo.description}} </li>
+				   <li ng-repeat="foo in collectionOfFoos | startFrom:currentPage*pageSize | limitTo:pageSize" ng-click="go('/detail')"><img ng-src='{{foo.image}}' height='50' weight='50'>{{foo.description}} </li>
 			   </ul>
 		</div><!-- end listView -->
 		<button type="submit" value="MoreCategories" ng-click="go('/search')">More Categories</button>
