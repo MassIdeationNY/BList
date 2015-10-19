@@ -159,7 +159,7 @@ app.controller("MapController", function($scope,  $http, $location ){
                              var geocoder  = new google.maps.Geocoder();
                              var location  = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
-          alert("currently at lat: " + latitude + "long: " + longitude );
+          alert("Your location - lat: " + latitude + "long: " + longitude );
         
            var mapOptions = {
                 zoom: 15,
