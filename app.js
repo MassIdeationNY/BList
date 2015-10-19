@@ -145,6 +145,31 @@ app.controller("MapController", function($scope,  $http, $location ){
         google.maps.event.trigger(selectedMarker, 'click');
     }
 
+  // try to center map around user's location
+            if (navigator.geolocation) {
+                                navigator.geolocation.getCurrentPosition(showPosition);
+                              } else { 
+                                  console.log("Geolocation is not supported by this browser.");
+                              }
+
+           function showPosition(position) {
+                             var latitude =  position.coords.latitude;
+                             var longitude =  position.coords.longitude;
+
+                             var geocoder  = new google.maps.Geocoder();
+                             var location  = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+          alert("currently at lat: " + latitude + "long: " + longitude );
+        
+           var mapOptions = {
+                zoom: 15,
+                center: new google.maps.LatLng(latitude, longitude ),
+                mapTypeId: google.maps.MapTypeId.TERRAIN
+            }
+
+            $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        }//end show position
 
   //
    $scope.go = function ( path ) {
